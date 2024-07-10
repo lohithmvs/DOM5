@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=document.createElement("input");
+        a.type="text";
+        var a1=document.createElement("br");
+        var b=document.createElement("button");
+        b.innerText="show name";
+        b.style.margin="5px";
+        var c=document.createElement("button");
+        c.innerText="save name";
+        c.style.margin="5px";
+        var d=document.createElement("button");
+        d.innerText="remove name";
+        d.style.margin="5px";
+        var e=document.createElement("button");
+        e.innerText="clear storage";
+        e.style.margin="5px";
+        document.body.append(a,a1,b,c,d,e);
+        c.addEventListener("click",function(){
+            window.sessionStorage.setItem(1,JSON.stringify(a.value));
+        });
+        b.addEventListener("click",function(){
+            window.open("./parse.html");
+        })
+        d.addEventListener("click",function(){
+            window.sessionStorage.clear(1);
+        })
+        e.addEventListener("click",function(){
+            window.sessionStorage.clear();
+        })
+    </script>
+</body>
+</html>

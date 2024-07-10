@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=document.createElement("img");
+        var x=JSON.parse(sessionStorage.getItem("img1"));
+        a.setAttribute("src",x);
+        var x1=+JSON.parse(sessionStorage.getItem("i"));
+        var h2=document.createElement("h3");
+        h2.innerText=x1+"img times";
+        var x11=+JSON.parse(sessionStorage.getItem("prr1"));
+        x11=x11*x1;
+        var y1=document.createElement("h4");
+        y1.innerText=x11+"price";
+        document.body.append(a,h2,y1);
+    </script>
+</body>
+</html>
